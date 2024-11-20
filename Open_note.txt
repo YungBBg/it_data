@@ -1,0 +1,10 @@
+npm install --force
+npm run dev
+
+'restaurant@gmail.com' && password === '123456'
+
+'customer@gmail.com' && password === '123456'
+
+'delivery@gmail.com' && password === '123456'
+
+'admin@gmail.com' && password === '123456'
