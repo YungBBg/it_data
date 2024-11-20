@@ -56,6 +56,8 @@ export default function FavoriteItem() {
                                 </Grid>
 
                                 <Button href='/Checkout' fullWidth variant='contained' sx={{ bgcolor: 'orange', ":hover": { bgcolor: 'orange' } }}>Reorder</Button>
+								<p></p>
+								<Button href='/Complain' fullWidth variant='contained' sx={{ bgcolor: 'black', ":hover": { bgcolor: 'red' } }}>Complain</Button>
 
                                 <Divider variant="middle" sx={{ margin: 1 }} />
 
@@ -63,6 +65,7 @@ export default function FavoriteItem() {
                                     <FoodRating key={index} setOpenSnack={setOpenSnack} rating={orderRecord.rating} />
                                 </Box>
                             </Card>
+							
                         </Grid>
                     </>
                 )
