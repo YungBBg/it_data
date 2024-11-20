@@ -15,6 +15,7 @@ import MoreRestaurantList from './component/MainContent/RestaurantList/MoreResta
 import FoodList from './component/MainContent/RestaurantList/FoodList.jsx'
 import { FoodSettingProvider } from './component/context/FoodSettingContext.jsx'
 import Checkout from './component/MainContent/Cart/index.jsx'
+import Complain from './component/Complain/Complain.jsx'
 
 //order record
 import OrderRecordList from './component/OrderRecordList'
@@ -101,6 +102,10 @@ const router = createBrowserRouter([
             {
                 path: "/Payment",
                 element: <Payment />
+            },
+            {
+                path: "/Complain",
+                element: <Complain />
             },
         ],
     },
