@@ -1,0 +1,38 @@
+[
+    {
+        "orderID": "202311221712010001",
+        "custName": "Sky Wong",
+        "orderTime": "2023-11-22 17:12",
+        "state": "Order Received"
+    },
+    {
+        "orderID": "202311231712010002",
+        "custName": "Sky Wong",
+        "orderTime": "2023-11-23 17:12",
+        "state": "Preparing"
+    },
+    {
+        "orderID": "202311241712010003",
+        "custName": "Sky Wong",
+        "orderTime": "2023-11-24 17:12",
+        "state": "Out for Delivery"
+    },
+    {
+        "orderID": "202311251712010004",
+        "custName": "Sky Wong",
+        "orderTime": "2023-11-25 17:12",
+        "state": "Delivered"
+    },
+    {
+        "orderID": "202311261712010005",
+        "custName": "Sky Wong",
+        "orderTime": "2023-11-26 17:12",
+        "state": "Order Cancelled"
+    },
+    {
+        "orderID": "202311271712010006",
+        "custName": "Sky Wong",
+        "orderTime": "2023-11-27 17:12",
+        "state": "Order Completed"
+    }
+]

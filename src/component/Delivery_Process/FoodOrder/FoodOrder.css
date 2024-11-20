@@ -1,0 +1,32 @@
+.food-order-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 50px;
+  justify-content: center;
+}
+
+.order-card {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  background-color: #ffffff; /* 設定卡片背景色為白色 */
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* 添加陰影 */
+}
+
+.order-card button {
+  background-color: #FFC0CB;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.order-card button:hover {
+  background-color: #FF69B4;
+  color: white;
+}

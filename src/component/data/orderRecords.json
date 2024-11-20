@@ -1,0 +1,32 @@
+[
+    {
+        "foodID":1,
+        "restaurant":"Restaurant A",
+        "price":123,
+        "orderDate":"27 Sept, 18:24",
+        "setMenu": "Set Menu A",
+        "menuDetail": "meal, water, noodles",
+        "rating":0, 
+        "img": "/src/component/img/img_restaurant/1.jpg"
+    },
+    {
+        "foodID":2,
+        "restaurant":"Restaurant B",
+        "price":123,
+        "orderDate":"26 Sept, 18:24",
+        "setMenu": "Set Menu D",
+        "menuDetail": "meal, water, noodles",
+        "rating":5, 
+        "img": "/src/component/img/img_restaurant/2.jpg"
+    },
+    {
+        "foodID":3,
+        "restaurant":"Restaurant c",
+        "price":123,
+        "orderDate":"25 Sept, 18:24",
+        "setMenu": "Set Menu C",
+        "menuDetail": "meal, water, noodles",
+        "rating":5, 
+        "img": "/src/component/img/img_restaurant/3.jpg"
+    }
+]

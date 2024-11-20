@@ -1,0 +1,70 @@
+.AcceptPage2-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  min-width: 850px;
+  max-width: 900px;
+  min-height: 700px;
+  max-height: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
+  font-family: Arial, sans-serif;
+}
+
+.AcceptPage2-container h2 {
+  color: #333;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.AcceptPage2-container .info-block {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.AcceptPage2-container .info-column {
+  width: 45%;
+}
+
+.AcceptPage2-container p {
+  color: #555;
+  font-size: 1.4em;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.AcceptPage2-container iframe {
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.AcceptPage2-container button {
+  background-color: #FF69B4;
+  border: none;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  margin: 20px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+
+.AcceptPage2-container button:hover {
+  background-color: #FFC0CB;
+  color: black;
+}

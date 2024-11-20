@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Modify_User_Data.css">
+    <style>
+        .error {
+            color: red;
+        }
+
+        .error input,
+        .error textarea {
+            color: black;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".warning").hide();
+            $('.emailWarning').hide();
+            $(".passwordWarning").hide();
+            $(".input-box > input").css("borderColor", "#9b59b6");
+
+            $('#registration-form').submit(function (event) {
+                event.preventDefault();
+
+                $('form input[data-required]').removeClass('error');
+                $('form textarea[data-required]').removeClass('error');
+
+                var hasErrors = false;
+
+                $('form input[data-required]').each(function () {
+                    if ($.trim($(this).val()) === '') {
+                        $(this).addClass('error');
+                        $(this).prev('span.details').addClass('error');
+
+                        $(this).siblings('.warning').show()
+                        hasErrors = true;
+                    } else {
+                        $(this).removeClass('error');
+                        $(this).prev('span.details').removeClass('error');
+
+                        $(this).siblings('.warning').hide()
+                        $('.emailWarning').hide();
+                        $(".passwordWarning").hide();
+                    }
+                });
+
+                $('form textarea[data-required]').each(function () {
+                    if ($.trim($(this).val()) === '') {
+                        $(this).addClass('error');
+                        $(this).prev('span.details').addClass('error');
+                        hasErrors = true;
+                    } else {
+                        $(this).removeClass('error');
+                        $(this).prev('span.details').removeClass('error');
+                    }
+                });
+
+                //validate email
+                console.log($('#email').val())
+                var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if ($('#email').val() != '' && !pattern.test($('#email').val())) {
+                    console.log('wrong email');
+                    $('.emailWarning').show();
+                    $('.emailWarning').siblings('.warning').hide();
+                    hasErrors = true;
+                }
+
+                //validate password
+                if ($('#password').val()) {
+                    if ($("#password").val() != $("#cmfPassword").val()) {
+                        $(".passwordWarning").show();
+                        $(".passwordWarning").siblings('.warning').hide();
+                        hasErrors = true;
+                    } else {
+                        $(".passwordWarning").hide();
+                    }
+                }
+
+                console.log(hasErrors)
+                if (!hasErrors) {
+                    alert('Update successfully!');
+                    window.location.href = '/deliveryUser/FoodOrder';
+                }
+            });
+
+            // scanner for input
+            $('form input[data-required], form textarea[data-required]').on('input', function () {
+                if ($.trim($(this).val()) === '') {
+                    $(this).addClass('error');
+                    $(this).prev('span.details').addClass('error');
+                } else {
+                    $(this).removeClass('error');
+                    $(this).prev('span.details').removeClass('error');
+                }
+            });
+
+
+            //back button
+            $('#btnBack').click(function () {
+                window.location.href = "/deliveryUser/FoodOrder";
+            });
+
+            //image function
+            const image = document.querySelector("img"),
+                input = document.querySelector("input");
+
+            input.addEventListener("change", () => {
+                image.src = URL.createObjectURL(input.files[0]);
+            })
+
+            //getValue change css
+            $("input").change(function () {
+                if ($(this).val() != "") {
+                    $(this).css("borderColor", "#9b59b6");
+                } else {
+                    $(this).css("borderColor", "");
+                }
+            })
+
+            $(".photo-f label").hover(function(){
+                $(this).css("transform", "translate(-5px, -5%)");
+                $(this).css("box-shadow", "3px 3px black");
+            }, function(){
+                $(this).css("transform", "");
+                $(this).css("box-shadow", "");
+            });
+
+            $("form .button input").mouseover(function(){
+                $(this).css("transform", "translate(-5px, -5%)");
+                $(this).css("box-shadow", "5px 5px black");
+            });
+
+            $("form .button input").mouseout(function(){
+                $(this).css("transform", "");
+                $(this).css("box-shadow", "");
+            }) 
+
+
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Profile</div>
+        <form id="registration-form" action="#">
+
+            <div class="photo">
+                <img src="User.jpg">
+            </div>
+            <div class="photo-f">
+                <input type="file" id="upload" />
+                <label for="upload" class="upload">Upload</label>
+            </div>
+
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Full name *</span>
+                    <input type="text" placeholder="Enter your name" value="Chan Siu Ming" data-required>
+                    <div class="warning" style="color: red; font-size: 12px;">Please enter Full Name</div>
+                </div>
+                <div class="input-box">
+                    <span class="details">User-name </span>
+                    <input type="text" placeholder="Enter your user name" value="Siu Ming" data-required disabled>
+                    <div class="warning" style="color: red; font-size: 12px;">Please enter User-name</div>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email * </span>
+                    <input type="text" placeholder="Enter your email" id="email" value="SiuMing@gmail.com"
+                        data-required>
+                    <div class="warning" style="color: red; font-size: 12px;">Please enter Email</div>
+                    <div class="emailWarning" style="color: red; font-size: 12px;">Please enter Email format
+                    </div>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number *</span>
+                    <input type="text" placeholder="Enter your phone number" value="67891234" data-required>
+                    <div class="warning" style="color: red; font-size: 12px;">Please enter phone number</div>
+                </div>
+                <div class="input-box">
+                    <span class="details">Password * </span>
+                    <input type="password" placeholder="Enter your Password" id="password" value="abc" data-required>
+                    <div class="warning" style="color: red; font-size: 12px;">Please enter Password</div>
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirm Password * </span>
+                    <input type="password" placeholder="Enter your Password" id="cmfPassword" value="abc" data-required>
+                    <div class="warning" style="color: red; font-size: 12px;">Please enter confirm Password</div>
+                    <div class="passwordWarning" style="color: red; font-size: 12px;">Please enter the same password
+                    </div>
+                </div>
+
+                <div class="input-box" style="width: calc(100%);">
+                    <span class="details">Shipping Address  </span>
+                    <input type="text" placeholder="Address1" id="addr" style="margin-bottom: 10px;" value="19 Tsing Wun Road, Tuen Mun">
+                </div>
+
+            </div>
+            <div class="gender-details">
+
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <input type="radio" name="gender" id="dot-3" checked>
+                <span class="gender-title">Gender </span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Other</span>
+                    </label>
+                </div>
+
+
+                <div class="button">
+                    <input type="submit" value="Update">
+                </div>
+
+                <div class="button" id="btnBack">
+                    <input type="button" value="Back">
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

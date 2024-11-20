@@ -1,0 +1,32 @@
+[
+    {
+        "restaurant":"Restaurant A",
+        "type":"Chinese",
+        "menu":"menuA",
+        "img": "/src/component/img/img_restaurant/1.jpg"
+    },
+    {
+        "restaurant":"Restaurant B",
+        "type":"Korean",
+        "menu":"menuB",
+        "img": "/src/component/img/img_restaurant/2.jpg"
+    },
+    {
+        "restaurant":"Restaurant C",
+        "type":"Western",
+        "menu":"menuC",
+        "img": "/src/component/img/img_restaurant/3.jpg"
+    },
+    {
+        "restaurant":"Restaurant D",
+        "type":"Japan",
+        "menu":"menuD",
+        "img": "/src/component/img/img_restaurant/4.jpg"
+    },
+    {
+        "restaurant":"Restaurant E",
+        "type":"Chinese",
+        "menu":"menuE",
+        "img": "/src/component/img/img_restaurant/5.jpg"
+    }
+]

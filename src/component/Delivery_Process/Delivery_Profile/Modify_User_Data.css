@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(180deg, #FFC0CB, #FFB6C1, #FF69B4);
+}
+
+img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #dfdfdf;
+    border: 2px solid #9b59b6;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.photo-f {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-f input[type="file"] {
+    display: none;
+}
+
+.photo-f label {
+    display: inline-block;
+    padding: 5px 30px;
+    background: linear-gradient(135deg, #A08AE9, #3D4397);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:  0.3s ease;
+}
+
+/*ki update*/
+.photo-f label:hover {
+    /* background: #45a049; */
+    /* transform: translate(-5px, -5%);
+    box-shadow: 3px 3px black; */
+}
+
+
+.tacbox {
+    display: block;
+    padding: 1em;
+    margin: 2em;
+    border: 3px solid #ddd;
+    background-color: #eee;
+    max-width: 800px;
+}
+
+.container {
+    overflow: auto;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #A08AE9, #3D4397);
+
+}
+
+.container form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+
+/* .user-details .input-box input:valid {
+    border-color: #9b59b6;
+} */
+/*ki update*/
+.user-details .input-box input:focus{
+    transform: translate(-1px, -5%);
+}
+
+form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .gender-details .category {
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+form .gender-details label {
+    display: flex;
+    align-items: center;
+}
+
+form .gender-details .dot {
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+
+}
+
+#dot-1:checked~.category label .one,
+#dot-2:checked~.category label .two,
+#dot-3:checked~.category label .three,
+#payOption-1:checked~.payRadio label .one,
+#payOption-2:checked~.payRadio label .two,
+#payOption-3:checked~.payRadio label .three {
+            
+    border-color: #d9d9d9;
+    background: #9b59b6;
+
+}
+
+form input[type="radio"] {
+    display: none;
+}
+
+form .button {
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #A08AE9, #3D4397);
+    transition: all 0.3s ease;
+}
+
+/*ki update*/
+/* form .button input:hover {
+    transform: translate(-5px, -5%);
+    box-shadow: 5px 5px black;
+} */
+
+@media(max-width:584px) {
+    .container {
+        max-width: 100%;
+    }
+
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    form .gender-details .category {
+        width: 100%;
+
+    }
+
+    .container form .user-details {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .user-details::-webkit-scrollbar {
+        width: 0;
+    }
+
+}
+
+.type-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.type-btn button {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border: none;
+    background-color: #71b7e6;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.type-btn button:hover {
+    background-color: #5a9dc4;
+}
+
+.type-btn button:focus {
+    outline: none;
+}

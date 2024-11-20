@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "name": "Meat",
+      "option":"water",
+      "price": 10.99,
+      "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Sashimi",
+      "option":"water",
+      "price": 1199,
+      "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Udon",
+      "option":"water",
+      "price": 1.05,
+      "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Sweet Soup",
+      "option":"water",
+      "price": 14000,
+      "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+    }
+  ]

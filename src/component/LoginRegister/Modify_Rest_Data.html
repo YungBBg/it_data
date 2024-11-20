@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Restaurant.css">
+    <style>
+        .error {
+            color: red;
+        }
+
+        .error input,
+        .error textarea {
+            color: black;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $(".warning").hide();
+            $('.emailWarning').hide();
+            $(".phoneWarning").hide();
+            $(".passwordWarning").hide();
+
+            //image function
+            const image = document.querySelector("img"),
+                input = document.querySelector("input");
+
+            input.addEventListener("change", () => {
+                image.src = URL.createObjectURL(input.files[0]);
+            })
+
+
+            $('#registration-form').submit(function (event) {
+                event.preventDefault();
+
+                $('form input[data-required]').removeClass('error');
+                $('form textarea[data-required]').removeClass('error');
+
+                var hasErrors = false;
+
+                $('form input[data-required]').each(function () {
+                    if ($.trim($(this).val()) === '') {
+                        $(this).addClass('error');
+                        $(this).prev('span.details').addClass('error');
+                        $(this).siblings('.warning').show()
+
+                        hasErrors = true;
+                    } else {
+                        $(this).removeClass('error');
+                        $(this).prev('span.details').removeClass('error');
+                        $(this).siblings('.warning').hide()
+
+                        $('.emailWarning').hide();
+                        $(".passwordWarning").hide();
+                        $('.phoneWarning').hide();
+                    }
+                });
+
+                $('form textarea[data-required]').each(function () {
+                    if ($.trim($(this).val()) === '') {
+                        $(this).addClass('error');
+                        $(this).prev('span.details').addClass('error');
+                        $(this).siblings('.warning').show()
+
+                        hasErrors = true;
+                    } else {
+                        $(this).removeClass('error');
+                        $(this).prev('span.details').removeClass('error');
+                        $(this).siblings('.warning').hide()
+                    }
+                });
+
+                //validate email
+                var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if ($('#email').val() != '' && !pattern.test($('#email').val())) {
+                    $('.emailWarning').show();
+                    $('.emailWarning').siblings('.warning').hide();
+                    hasErrors = true;
+                }
+
+                //validate phone
+                if ($('#phone').val() !== "") {
+                    if (!Number.isInteger(parseInt($('#phone').val())) || $('#phone').val().length < 8) {
+                        $('.phoneWarning').show();
+                        $('.phoneWarning').siblings('.warning').hide();
+                        hasErrors = true;
+                    } else {
+                        $('.phoneWarning').hide();
+                    }
+                }
+
+                //validate password
+                if ($('#password').val()) {
+                    if ($("#password").val() != $("#cmfPassword").val()) {
+                        $(".passwordWarning").show();
+                        $(".passwordWarning").siblings('.warning').hide();
+                        hasErrors = true;
+                    } else {
+                        $(".passwordWarning").hide();
+                    }
+                }
+
+                //validate tac
+                if (!$('#checkbox').is(':checked')) {
+                    $('.tacWarning').show();
+                    hasErros = true;
+                } else (
+                    $('.tacWarning').hide()
+                )
+
+                if (!hasErrors) {
+                    alert('Created successfully!');
+                    window.location.href = '/restaurantAdmin/restaurants'
+                }
+            });
+
+            // scanner for input
+            $('form input[data-required], form textarea[data-required]').on('input', function () {
+                if ($.trim($(this).val()) === '') {
+                    $(this).addClass('error');
+                    $(this).prev('span.details').addClass('error');
+                } else {
+                    $(this).removeClass('error');
+                    $(this).prev('span.details').removeClass('error');
+                }
+            });
+
+            //getValue change css
+            $("input").change(function () {
+                if ($(this).val() != "") {
+                    $(this).css("borderColor", "#9b59b6");
+                } else {
+                    $(this).css("borderColor", "");
+                }
+            })
+
+            $(".photo-f label").hover(function () {
+                $(this).css("transform", "translate(-5px, -5%)");
+                $(this).css("box-shadow", "3px 3px black");
+            }, function () {
+                $(this).css("transform", "");
+                $(this).css("box-shadow", "");
+            });
+
+            $("form .button input").mouseover(function () {
+                $(this).css("transform", "translate(-5px, -5%)");
+                $(this).css("box-shadow", "5px 5px black");
+            });
+
+            $("form .button input").mouseout(function () {
+                $(this).css("transform", "");
+                $(this).css("box-shadow", "");
+            })
+
+            $("#distbox").change(function () {
+                var districtOpt = $("#district option")
+                var index = -1;
+                for (var i = 0; i < districtOpt.length; i++) {
+                    if (districtOpt[i].value === this.value) {
+                        index = i
+                    }
+                }
+
+                if (index < 0) {
+                    $("#regionbox").val("")
+                } else if (index < 4) {
+                    $("#regionbox").val("Hong Kong")
+                } else if (index < 9) {
+                    $("#regionbox").val("Kowloon")
+                } else {
+                    $("#regionbox").val("New Territories")
+                }
+            })
+
+            $("#shutterBtn").click(function () {
+                if ($(this).val() == "Close Restaurant") {
+                    var isClose = confirm('Are you sure you want to close the restaurant?');
+                    if (isClose) {
+                        alert("The restaurant already close.")
+                        $(this).css("background", "linear-gradient(135deg,  #70A831, #A5CF00)");
+                        $(this).val("Open Restaurant");
+                    }
+                } else {
+                    var isClose = confirm('Are you sure you want to open the restaurant?');
+                    if (isClose) {
+                        alert("The restaurant already open.")
+                        $(this).css("background", "linear-gradient(135deg, #d62509, #d5670d)");
+                        $(this).val("Close Restaurant");
+                    }
+                }
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Modify-Restaurant</div>
+        <form id="registration-form" action="#">
+
+            <div class="photo">
+                <img src="Rest.png" width="10px" height="10px">
+            </div>
+            <div class="photo-f">
+                <input type="file" id="upload" />
+                <label for="upload">Upload</label>
+            </div>
+
+            <div class="user-details">
+                <div class="input-box" style="width: calc(100%);">
+                    <span class="details">Restaurant-Name *</span>
+                    <input type="text" value="Japan Restaurant" readonly>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Restaurant-Type *</span>
+                    <input type="text" value="Japanese" readonly>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Menu</span>
+                    <select name="Menu" id="menu" data-required>
+                        <option value="">--Please select menu--</option>
+                        <option value="Menu A">Menu A</option>
+                        <option value="Menu A">Menu B</option>
+                        <option value="Menu A">Menu C</option>
+                        <option value="Menu A">Menu D</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Restaurant-Email *</span>
+                    <input type="text" value="JapaneseRestaurant@xxx.com" placeholder="Enter your email" data-required
+                        id="email">
+                    <div class="warning" style="color: red; font-size: 12px;">Please enter Email</div>
+                    <div class="emailWarning" style="color: red; font-size: 12px;">Please enter Email format e.g.
+                        abc@xxx.com</div>
+                </div>
+                <div class="input-box">
+                    <span class="details">Restaurant-Phone Number *</span>
+                    <input type="text" value="56457894" placeholder="Enter your number" data-required id="phone">
+                    <div class="warning" style="color: red; font-size: 12px;">Please enter phone number</div>
+                    <div class="phoneWarning" style="color: red; font-size: 12px;">Please enter 8 Number e.g. 56783456
+                    </div>
+                </div>
+
+                <div class="input-box" style="width: calc(100%);">
+                    <span class="details">Address 1 *</span>
+                    <input type="text" value="20 Tsing Wun Road, Tuen Mun" placeholder="e.g. Rm." data-required
+                        id="address1">
+                    <div class="warning" style="color: red; font-size: 12px;">Please enter at least one address</div>
+                </div>
+
+                <div class="input-box" style="width: calc(100%);">
+                    <span class="details">Address 2</span>
+                    <input type="text" placeholder="e.g. estate" id="address2" style="width: calc(100%);">
+                </div>
+                <div class="input-box" style="width: calc(100%);">
+                    <span class="details">Address 3</span>
+                    <input type="text" placeholder="Address" id="address3" style="width: calc(100%);">
+                </div>
+
+                <div class="input-box">
+                    <span class="details">District</span>
+                    <input list="district" type="text" id="distbox" />
+                    <datalist id="district">
+                        <!-- hong kong -->
+                        <option value="Central and Western">
+                        <option value="Eastern">
+                        <option value="Southern">
+                        <option value="Wan Chai">
+                            <!-- kowloon -->
+                        <option value="Kowloon City">
+                        <option value="Kwun Tong">
+                        <option value="Sham Shui Po">
+                        <option value="Wong Tai Sin">
+                        <option value="Yau Tsim Mong">
+                            <!-- New Territories -->
+                        <option value="Islands">
+                        <option value="Kwai Tsing">
+                        <option value="North">
+                        <option value="Sai Kung">
+                        <option value="Sha Tin">
+                        <option value="Tai Po">
+                        <option value="Tsuen Wan">
+                        <option value="Tuen Mun">
+                        <option value="Yuen Long">
+                    </datalist>
+                </div>
+                <div class="input-box">
+                    <span class="details">Region</span>
+                    <input list="region" type="text" id="regionbox" disabled />
+                </div>
+
+
+            </div>
+            <div class="gender-details">
+                <div class="button" style="margin-top: -5px;">
+                    <input type="submit" value="Update" style="cursor: pointer;">
+                </div>
+
+                <div class="button" style="margin-top: -20px;">
+                    <input type="button" value="Back" onclick="window.location.href = '/restaurantAdmin/restaurants'"
+                        style="cursor: pointer;">
+                </div>
+
+                <div class="button" style="margin-top: -20px;">
+                    <input type="button" value="Close Restaurant" id="shutterBtn"
+                        style="cursor: pointer; background: linear-gradient(135deg, #d62509, #d5670d);">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

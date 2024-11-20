@@ -1,0 +1,598 @@
+[
+    {
+        "type": "chinese",
+        "children": [
+            {
+                "recommend": true,
+                "type": "chinese",
+                "name": "Chinese Restaurant1",
+                "address": "1 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 4.5,
+                "price": 3,
+                "img": "/src/component/img/img_restaurant/1.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            },
+            {
+                "recommend": true,
+                "type": "chinese",
+                "name": "Chinese Restaurant2",
+                "address": "2 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 3.5,
+                "price": 2,
+                "img": "/src/component/img/img_restaurant/2.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            },
+            {
+                "recommend": true,
+                "type": "chinese",
+                "name": "Chinese Restaurant3",
+                "address": "3 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 3,
+                "price": 2,
+                "img": "/src/component/img/img_restaurant/3.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            },
+            {
+                "recommend": true,
+                "type": "chinese",
+                "name": "Chinese Restaurant4",
+                "address": "4 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 4,
+                "price": 1,
+                "img": "/src/component/img/img_restaurant/4.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "korean",
+        "children": [
+            {
+                "recommend": true,
+                "type": "korean",
+                "name": "Korean Restaurant1",
+                "address": "5 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 4.5,
+                "price": 3,
+                "img": "/src/component/img/img_restaurant/5.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            },
+            {
+                "recommend": true,
+                "type": "korean",
+                "name": "Korean Restaurant2",
+                "address": "6 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 4.5,
+                "price": 3,
+                "img": "/src/component/img/img_restaurant/6.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            },
+            {
+                "recommend": true,
+                "type": "korean",
+                "name": "Korean Restaurant3",
+                "address": "7 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 4.5,
+                "price": 3,
+                "img": "/src/component/img/img_restaurant/7.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            },
+            {
+                "recommend": true,
+                "type": "korean",
+                "name": "Korean Restaurant4",
+                "address": "8 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 4.5,
+                "price": 3,
+                "img": "/src/component/img/img_restaurant/8.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "western",
+        "children": [
+            {
+                "recommend": true,
+                "type": "western",
+                "name": "Western Restaurant9",
+                "address": "9 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 4.5,
+                "price": 3,
+                "img": "/src/component/img/img_restaurant/9.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            },
+            {
+                "recommend": true,
+                "type": "western",
+                "name": "Western Restaurant10",
+                "address": "10 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 4.5,
+                "price": 3,
+                "img": "/src/component/img/img_restaurant/10.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            },
+            {
+                "recommend": true,
+                "type": "western",
+                "name": "Western Restaurant11",
+                "address": "11 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 4.5,
+                "price": 3,
+                "img": "/src/component/img/img_restaurant/11.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            },
+            {
+                "recommend": true,
+                "type": "western",
+                "name": "Western Restaurant12",
+                "address": "12 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 4.5,
+                "price": 3,
+                "img": "/src/component/img/img_restaurant/12.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "japan",
+        "children": [
+            {
+                "recommend": true,
+                "type": "japan",
+                "name": "Japan Restaurant1",
+                "address": "13 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 4.5,
+                "price": 3,
+                "img": "/src/component/img/img_restaurant/13.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            },
+            {
+                "recommend": true,
+                "type": "japan",
+                "name": "Japan Restaurant2",
+                "address": "14 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 4.5,
+                "price": 3,
+                "img": "/src/component/img/img_restaurant/14.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            },
+            {
+                "recommend": true,
+                "type": "japan",
+                "name": "Japan Restaurant3",
+                "address": "15 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 4.5,
+                "price": 3,
+                "img": "/src/component/img/img_restaurant/15.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            },
+            {
+                "recommend": true,
+                "type": "japan",
+                "name": "Japan Restaurant4",
+                "address": "16 Tsing Wun Road, Tuen Mun, NT",
+                "rating": 4.5,
+                "price": 3,
+                "img": "/src/component/img/img_restaurant/16.jpg",
+                "path": "/FoodList",
+                "menu": [
+                    {
+                        "id": 1,
+                        "name": "Meat",
+                        "price": 10.99,
+                        "imgUrl": "/src/component/img/img_restaurant/1.jpg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Udon",
+                        "price": 1199,
+                        "imgUrl": "/src/component/img/img_restaurant/2.jpg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Sashimi",
+                        "price": 1.05,
+                        "imgUrl": "/src/component/img/img_restaurant/3.jpg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Sweet Soup",
+                        "price": 14000,
+                        "imgUrl": "/src/component/img/img_restaurant/4.jpg"
+                    }
+                ]
+            }
+        ]
+    }
+]

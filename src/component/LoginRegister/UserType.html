@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Type</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Register-Type.css">
+    <script src="../../jslib/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(()=>{
+            $("#custBtn").click(()=>{window.location.href="/src/component/LoginRegister/C-Register.html"})
+            $("#deliBtn").click(()=>{window.location.href="/src/component/LoginRegister/D-Register.html"})
+        })
+
+        var camera = window.FontAwesome.icon({ prefix: 'fas', iconName: 'camera' })
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Choose User</div>
+        <div class="type-btn">
+            
+        <button id="custBtn"> <!--last add word = class name (icon)-->
+            <i class="fa-solid fa-user icon"></i><br>
+            Customer
+        </button>
+
+        <button id="deliBtn">
+            <i class="fa-solid fa-motorcycle icon"></i><br>
+            Delivery Personnel
+        </button>
+
+        <div class="tacbox">
+            &emsp; Already have an account? 
+            <a href="/Login">Login</a></label>
+        </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
